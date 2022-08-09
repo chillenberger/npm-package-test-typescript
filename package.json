@@ -1,7 +1,8 @@
 {
     "name": "@my-domain/my-repo",
-    "version": "0.1.14",
+    "version": "0.1.16",
     "description": "A simple test package",
+    "typings": "types/types.d.ts",
     "keywords": [
         "components"
     ],
@@ -9,6 +10,7 @@
     "files": [
         "index.js",
         "components",
+        "types",
         "README.md",
         "package.json"
     ],
