@@ -1,12 +1,13 @@
 {
     "name": "@my-domain/my-repo",
-    "version": "0.1.13",
+    "version": "0.2.0",
     "description": "A simple test package",
     "keywords": [
         "components"
     ],
-    "main": "index.js",
+    "main": "dist/index.js",
     "files": [ 
+        "dist/",
         "index.js", 
         "components", 
         "README.md", 
@@ -16,7 +17,7 @@
         "preinstall": "npm run co:login",
         "co:login": "aws codeartifact login --tool npm --repository my-repo --domain my-domain",
         "test": "echo \"Error: no test specified\" && exit 1", 
-        "build": "rm -rf dist && ./node_modules/.bin/babel src --out-dir ./"
+        "build": "rm -rf dist && ./node_modules/.bin/babel src --out-dir ./dist"
     },
     "devDependencies": {
         "@babel/cli": "^7.18.10",
