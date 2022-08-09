@@ -1,5 +1,7 @@
-import helloWorld from './components/hello';
+import {HelloWorld, Button, MyTester} from './components/hello';
 
 export {
-    helloWorld
+    HelloWorld,
+    Button,
+    MyTester
 };

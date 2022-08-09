@@ -3,13 +3,23 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "helloWorld", {
+Object.defineProperty(exports, "Button", {
   enumerable: true,
   get: function get() {
-    return _hello.default;
+    return _hello.Button;
+  }
+});
+Object.defineProperty(exports, "HelloWorld", {
+  enumerable: true,
+  get: function get() {
+    return _hello.HelloWorld;
+  }
+});
+Object.defineProperty(exports, "MyTester", {
+  enumerable: true,
+  get: function get() {
+    return _hello.MyTester;
   }
 });
 
-var _hello = _interopRequireDefault(require("./components/hello"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _hello = require("./components/hello");
