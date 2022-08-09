@@ -4,9 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+const message = 'hello world 3';
 
 function helloWorld() {
-  return 'hello world 2';
+  return message;
 }
 
 var _default = helloWorld;
