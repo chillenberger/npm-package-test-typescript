@@ -4,7 +4,9 @@ const message: string = 'hello world 3'
 
 function HelloWorld() {
     return (
-        <div>test</div>
+        <div>
+            <h1>Hello from npm registry!</h1>
+        </div>
     );
 }
 
