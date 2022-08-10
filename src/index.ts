@@ -1,7 +1,5 @@
-import {HelloWorld, Button, MyTester} from './components/hello';
+import Auth_Button from './components/Auth_Button';
 
 export {
-    HelloWorld,
-    Button,
-    MyTester
+    Auth_Button
 };

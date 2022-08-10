@@ -1,0 +1,20 @@
+@import '../base/var';
+
+.auth-button {
+    display: flex;
+    place-items: center;
+    padding: 10px 15px;
+    gap: 10px;
+    color: #{$white};
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    border-radius: .3em;
+    cursor: pointer;
+    line-height: 1;
+    background-color: #F88F00;
+}
+.auth-button:hover {
+    background-color: #FFB454;
+    color: #{white};
+}

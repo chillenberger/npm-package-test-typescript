@@ -1,0 +1,38 @@
+
+$font-size-root: 100%; // default is 16px
+$font-size-base: $font-size-root;
+$line-height-base: 1.1;
+$font-family-base: helvetica, arial, sans-serif;
+$font-family-headline: $font-family-base;
+$font-bold-weight: 700;
+
+// BRAND COLORS
+$brand-background: #eaeaea;
+$brand-primary: #ff9000;
+$brand-secondary: #002767;
+$brand-tertiary: #01457c;
+$brand-info: #04a3ff;
+$brand-success: #1bb351;
+$brand-warning: #ffb700;
+$brand-error: #af0a0a;
+
+// BRAND REFERENCE
+$primary: $brand-primary;
+$secondary: $brand-secondary;
+$tertiary: $brand-tertiary;
+$info: $brand-info;
+$success: $brand-success;
+$warning: $brand-warning;
+$error: $brand-error;
+$error-bg: #fddddd;
+
+// GREY
+$white: #fff;
+$black: #000;
+$grey-l1: #ccc;
+$grey-l2: #e1e1e1;
+$grey-d1: #333;
+
+// OPACITY COLORING
+$b-01: rgba(0, 0, 0, 0.9);
+$b-02: rgba(0, 0, 0, 0.5);
