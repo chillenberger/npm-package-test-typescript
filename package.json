@@ -1,6 +1,6 @@
 {
     "name": "@smart-warehousing/tsx-sandbox-ui",
-    "version": "0.2.8",
+    "version": "0.2.9",
     "description": "A simple test package",
     "typings": "types/types.d.ts",
     "keywords": [
@@ -9,7 +9,6 @@
     "main": "dist/index.js",
     "files": [
         "dist/",
-        "types",
         "README.md",
         "package.json"
     ],
@@ -17,8 +16,9 @@
         "preinstall": "npm run co:login",
         "co:login": "aws codeartifact login --tool npm --repository ui-collection --domain smart-warehousing-codeartifact-sandbox-domain  --region us-east-1 --profile smart-sandbox",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "npm run build:babel && npm run build:css", 
-        "build:babel": "rm -rf dist && ./node_modules/.bin/babel --extensions .tsx --extensions .ts src --out-dir ./dist",
+        "build": "npm run build:babel && npm run build:types && npm run build:css", 
+        "build:babel": "rm -rf dist && ./node_modules/.bin/babel --extensions .tsx --extensions .ts src --out-dir ./dist --ignore '**/types'",
+        "build:types": "python3 scripts/types_move.py",
         "build:css": "python3 scripts/css_move.py"
     },
     "devDependencies": {

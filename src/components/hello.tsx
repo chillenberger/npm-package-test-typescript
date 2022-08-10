@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/hello.css';
+import '../styles/components/hello.css';
 
 const message: string = 'hello world 3'
 
