@@ -9,7 +9,7 @@ exports.MyTester = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-require("./hello.css");
+require("../styles/hello.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
