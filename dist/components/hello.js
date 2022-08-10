@@ -9,12 +9,16 @@ exports.MyTester = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+require("./hello.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const message = 'hello world 3';
 
 function HelloWorld() {
-  return /*#__PURE__*/_react.default.createElement("div", null, "test");
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "hello_div"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Hello from npm registry!"));
 }
 
 const MyTester = children => {

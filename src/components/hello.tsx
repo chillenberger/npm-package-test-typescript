@@ -1,10 +1,11 @@
 import React from 'react';
+import '../styles/hello.css';
 
 const message: string = 'hello world 3'
 
 function HelloWorld() {
     return (
-        <div>
+        <div className='hello_div'>
             <h1>Hello from npm registry!</h1>
         </div>
     );

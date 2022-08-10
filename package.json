@@ -1,6 +1,6 @@
 {
-    "name": "@my-domain/my-repo",
-    "version": "0.2.3",
+    "name": "@smart-warehousing/tsx-sandbox-ui",
+    "version": "0.2.8",
     "description": "A simple test package",
     "typings": "types/types.d.ts",
     "keywords": [
@@ -15,9 +15,10 @@
     ],
     "scripts": {
         "preinstall": "npm run co:login",
-        "co:login": "aws codeartifact login --tool npm --repository my-repo --domain my-domain",
+        "co:login": "aws codeartifact login --tool npm --repository ui-collection --domain smart-warehousing-codeartifact-sandbox-domain  --region us-east-1 --profile smart-sandbox",
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "rm -rf dist && ./node_modules/.bin/babel --extensions .tsx --extensions .ts src --out-dir ./dist"
+        "build": "rm -rf dist && ./node_modules/.bin/babel --extensions .tsx --extensions .ts src --out-dir ./dist",
+        "build:test": "echo test"
     },
     "devDependencies": {
         "@babel/cli": "^7.18.10",
