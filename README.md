@@ -1,13 +1,13 @@
-#Shared Components
-###This repository will house UI components hosted on AWS CodeArtifact to be used across apps
+# Shared Components
+### This repository will house UI components hosted on AWS CodeArtifact to be used across apps
 
-##Create AWS Resources##
+## Create AWS Resources##
 AWS resources are made using [AWS Serverless Application Model CLI](https://aws.amazon.com/serverless/sam/).
 
 template.yaml was created from [library-reference-data](https://github.com/Smart-Warehousing/library-reference-data/tree/swat-281-testing#library-reference-data) POC.  It creates resource domain and repository.  If your desired domain and repository is already created, you do not need to redeploy. 
 
 
-##Connect to AWS CodeArtifact repository
+## Connect to AWS CodeArtifact repository
     - ensure you are logged into correct aws sso profile by running aws sso login --profile \<desired environment\>.
     - npm run co:login 
 verify you are connected to the repository with 
@@ -19,11 +19,11 @@ To change back to the default npm registry use
 
 REF: [AWS](https://docs.aws.amazon.com/codeartifact/latest/ug/npm-auth.html)
 
-##build dist file
+## build dist file
 The dist file holds the files users consume.  To update the dist folder with your changes use npm build.
 This will clean the dist folder and rebuild the library. 
 
-##Publishing
+## Publishing
 As of now to publish you must increment the version in package.json then use npm publish.  This will publish the contents of the dist folder with package.json and readme.md. 
 
 
