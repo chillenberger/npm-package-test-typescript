@@ -51,6 +51,7 @@ module.exports = {
     output: {
         filename: 'index.js',
         path: path.resolve(__dirname, "dist"),
+        clean: true,
         library: {
             name: '@smart-warehousing/tsx-sandbox-ui',
             type: 'umd'
