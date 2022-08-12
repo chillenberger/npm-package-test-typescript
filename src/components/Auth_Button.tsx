@@ -14,6 +14,7 @@ function Auth_Button(props: buttonProp) {
             id="loginButton"
             onClick={props.action}>
             {props.title}
+            rev 0.2.20
         </Button>
     )
 }
