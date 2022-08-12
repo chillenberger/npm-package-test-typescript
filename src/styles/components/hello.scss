@@ -5,7 +5,6 @@
     place-items: center;
     padding: 10px 15px;
     gap: 10px;
-    color: #{$white};
     font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
     border: 0;
@@ -16,5 +15,5 @@
 }
 .auth-button:hover {
     background-color: #FFB454;
-    color: #{white};
+    color: $white;
 }

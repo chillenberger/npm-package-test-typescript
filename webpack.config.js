@@ -30,7 +30,7 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
-                exclude: [/node_modules/, /webpack.config.js/]
+                exclude: [/node_modules/]
             },
             {
                 test: /\.s[ac]ss$/i,
