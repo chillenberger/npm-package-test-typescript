@@ -24,6 +24,6 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  title: 'Button',
+  title: 'Other Button',
 };
 

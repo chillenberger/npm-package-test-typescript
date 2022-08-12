@@ -8,6 +8,7 @@ module.exports = {
             {
                 test:/\.tsx?/,
                 loader: 'babel-loader',
+                exclude: [/node_modules/],
                 options: {
                     "presets": [
                         [
@@ -29,8 +30,7 @@ module.exports = {
             },
             {
                 test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: [/node_modules/]
+                use: 'ts-loader'
             },
             {
                 test: /\.s[ac]ss$/i,
