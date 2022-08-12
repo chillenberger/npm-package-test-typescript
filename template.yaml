@@ -1,0 +1,98 @@
+# sam package --template-file template.yaml --s3-bucket 692687096002-cf-stacks --output-template-file packaged.yaml --profile smart-shared --region us-east-1
+# sam deploy --template-file packaged.yaml --stack-name code-artifact --capabilities CAPABILITY_NAMED_IAM --profile smart-shared --region us-east-1
+
+AWSTemplateFormatVersion: 2010-09-09
+Transform: "AWS::Serverless-2016-10-31"
+Description: Bootstrap template for CodeArtifact Domain, Repository and related resources
+
+# ========================================================== #
+# ======================== PARAMETERS ====================== # 
+# ========================================================== #
+Parameters:
+  pAppName:
+    Type: String
+    Description: A short name for the application
+    Default: smart
+  pCustomerName:
+    Type: String
+    Description: Customer Name for Resources
+    Default: smart-warehousing
+  pMapServer:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: Server value for AWS Migration Acceleration Program (MAP)
+    Default: /map/server
+  pKMSKey:
+    Type: AWS::SSM::Parameter::Value<String>
+    Description: KMS key to use with pipeline/codeartifact
+    Default: /smart/kms/key
+
+# ========================================================== #
+# ======================== RESOURCES ======================= # 
+# ========================================================== #
+Resources:
+  rCodeArtifactDomain:
+    Type: 'AWS::CodeArtifact::Domain'
+    Properties:
+      DomainName: !Sub "${pCustomerName}-codeartifact-sandbox-domain" #changed this to remove collision with smart-shared env.
+      EncryptionKey: !Ref pKMSKey
+      PermissionsPolicyDocument:
+          Version: 2012-10-17
+          Statement:
+            - Action:
+                - codeartifact:GetAuthorizationToken
+                - codeartifact:ReadFromRepository
+                - codeartifact:DescribePackageVersion
+                - codeartifact:DescribeRepository
+                - codeartifact:GetPackageVersionReadme
+                - codeartifact:GetRepositoryEndpoint
+                - codeartifact:ListPackageVersionAssets
+                - codeartifact:ListPackageVersionDependencies
+                - codeartifact:ListPackageVersions
+                - codeartifact:ListPackages
+                - codeartifact:ReadFromRepository
+              Effect: Allow
+              Principal:
+                AWS: !Sub arn:aws:iam::${AWS::AccountId}:root
+              Resource: "*"
+      Tags:
+        - Key: Application
+          Value: !Ref pAppName
+        - Key: map-migrated
+          Value: !Ref pMapServer
+  rCodeArtifactReferenceRepository:
+    Type: 'AWS::CodeArtifact::Repository'
+    Properties:
+      RepositoryName: "ui-collection"                    #change this to new repository 
+      DomainName: !GetAtt rCodeArtifactDomain.Name
+      ExternalConnections:
+        - "public:npmjs"
+# ========================================================== #
+# ===================== OUTPUT SSM PARAMS ================== # 
+# ========================================================== #
+  rCodeArtifactDomainParam:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: !Sub /${pAppName}/CodeArtifact/Domain
+      Type: String
+      Value: !GetAtt rCodeArtifactDomain.Name
+      Tags:
+        Application: !Ref pAppName
+        map-migrated: !Ref pMapServer
+  rCodeArtifactReferenceRepositoryParam:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: !Sub /${pAppName}/CodeArtifact/ReferenceRepository
+      Type: String
+      Value: !GetAtt rCodeArtifactReferenceRepository.Name
+      Tags:
+        Application: !Ref pAppName
+        map-migrated: !Ref pMapServer
+  rCodeArtifactAccountIdParam:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: !Sub /${pAppName}/CodeArtifact/AccountId
+      Type: String
+      Value: !Sub ${AWS::AccountId}
+      Tags:
+        Application: !Ref pAppName
+        map-migrated: !Ref pMapServer
