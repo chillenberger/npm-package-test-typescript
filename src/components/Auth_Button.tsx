@@ -2,7 +2,12 @@ import React from 'react';
 import { Button } from 'antd';
 import '../styles/components/hello.scss';
 
-function Auth_Button(props) {
+interface buttonProp {
+    title: string, 
+    action: () => void
+}
+
+function Auth_Button(props: buttonProp) {
     return (
         <Button
             className="auth-button"
