@@ -8,25 +8,26 @@ template.yaml was created from [library-reference-data](https://github.com/Smart
 
 
 ## Connect to AWS CodeArtifact repository
-ensure you are logged into correct aws sso profile by running `aws sso login --profile \<desired environment\>`.
-connect the npm registry with `npm run co:login` 
-verify you are connected to the repository with `npm -d ping` 
-you should see 
-    - npm notice PING https://YOUR DOMAIN - ACCOUNT NUMBER.d.codeartifact. YOUR REGION .amazonaws.com/npm/YOUR REPOSITORY /
+First ensure you are logged into the correct aws sso profile by running `aws sso login --profile <desired environment>`.
+
+Then connect to the npm registry with `npm run co:login`. 
+
+You should verify you are connected to the desired registry by running the command `npm -d ping`. 
+you should see `npm notice PING https://YOUR DOMAIN - ACCOUNT NUMBER.d.codeartifact. YOUR REGION .amazonaws.com/npm/YOUR REPOSITORY /`
+
 To change back to the default npm registry use `npm config set registry https://registry.npmjs.com/`
 
 REF: [AWS](https://docs.aws.amazon.com/codeartifact/latest/ug/npm-auth.html)
 
 ## Build Dist File
-The dist file holds the files users consume.  To update the dist folder with your changes use npm build.
+The dist file the project build output.  To perform a new build run the command `npm build`.
 This will clean the dist folder and rebuild the library. 
 
 ## Publishing
-As of now to publish you must increment the version in package.json then use npm publish.  This will publish the contents of the dist folder with package.json and readme.md. 
+As of now to publish you must increment the version in package.json then use npm publish.  This will publish the contents of the dist folder, package.json, and readme.md. 
 
-
-##Development
+## Development
 Since this is a component library, and not a deployable webapp, we cannot use react start to see our work as we develope.  Instead we use [Sorybook ](https://storybook.js.org/) to view or components.  
 
-To use this, in your folder, create a `<YOUR COMPONENT>.story.tsx` file.  Use another story as a template to create your story.  Once completed run the command npm run storybook.  Your component will be visible at the localhost:6006. 
+To view the component you are working on, in your folder, create a `<YOUR COMPONENT>.story.tsx` file.  Use another story as a template to create your story.  Once completed run the command `npm run storybook`.  Your component will be visible at the localhost:6006. 
 
