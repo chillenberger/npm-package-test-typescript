@@ -30,7 +30,7 @@ module.exports = {
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
-                exclude: /node_modules/,
+                exclude: [/node_modules/, /webpack.config.js/]
             },
             {
                 test: /\.s[ac]ss$/i,
@@ -46,7 +46,7 @@ module.exports = {
         ],
     },
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.tsx', '.ts'],
     },
     output: {
         filename: 'index.js',
