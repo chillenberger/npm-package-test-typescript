@@ -2,8 +2,7 @@ const path = require('path')
 
 module.exports = {
     entry: {
-        index: './src/index.ts', 
-        two: './src/second.tsx'
+        index: './src/index.ts'
     },
     mode: "production",
     module: {

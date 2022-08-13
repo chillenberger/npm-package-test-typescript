@@ -1,6 +1,6 @@
 {
   "name": "@smart-warehousing/tsx-sandbox-ui",
-  "version": "0.2.22",
+  "version": "0.2.24",
   "description": "A simple test package",
   "typings": "src/index.d.ts",
   "keywords": [
@@ -19,7 +19,8 @@
     "build": "webpack",
     "tsc": "tsc",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build:index": "tsc --project ./tsconfig.json"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.10",
