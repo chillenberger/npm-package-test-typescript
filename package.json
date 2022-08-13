@@ -1,6 +1,6 @@
 {
   "name": "@smart-warehousing/tsx-sandbox-ui",
-  "version": "0.2.20",
+  "version": "0.2.22",
   "description": "A simple test package",
   "typings": "src/index.d.ts",
   "keywords": [

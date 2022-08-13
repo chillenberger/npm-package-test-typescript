@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
-import '../styles/components/hello.scss';
+import '../../../styles/components/buttons/Auth_Button.scss';
+
 
 interface buttonProp {
     title: string, 
@@ -14,7 +15,6 @@ function Auth_Button(props: buttonProp) {
             id="loginButton"
             onClick={props.action}>
             {props.title}
-            rev 0.2.20
         </Button>
     )
 }

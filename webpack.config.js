@@ -1,7 +1,10 @@
 const path = require('path')
 
 module.exports = {
-    entry: './src/index.ts', 
+    entry: {
+        index: './src/index.ts', 
+        two: './src/second.tsx'
+    },
     mode: "production",
     module: {
         rules: [
@@ -35,12 +38,9 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    // Creates `style` nodes from JS strings
                     'style-loader',
-                    // Translates CSS into CommonJS
                     'css-loader',
-                    // Compiles Sass to CSS
-                    'sass-loader',
+                    'sass-loader'
                 ],
             },
         ],
@@ -49,7 +49,7 @@ module.exports = {
         extensions: ['.tsx', '.ts'],
     },
     output: {
-        filename: 'index.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, "dist"),
         clean: true,
         library: {

@@ -1,4 +1,4 @@
-@import '../base/var';
+@import '../../base/var';
 
 .auth-button {
     display: flex;
@@ -15,5 +15,5 @@
 }
 .auth-button:hover {
     background-color: #FFB454;
-    color: $white;
+    color: $brand-success;
 }
