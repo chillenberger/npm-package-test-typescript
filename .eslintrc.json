@@ -60,8 +60,7 @@
 		"no-await-in-loop": "warn",
 		"consistent-return": "warn",
 		"require-await": "warn",
-		"no-param-reassign": 0,
-		"jsx-a11y/anchor-is-valid": 0
+		"no-param-reassign": 0
     },
 	"settings": {
 		"react": {
