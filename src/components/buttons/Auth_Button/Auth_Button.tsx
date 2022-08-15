@@ -16,7 +16,7 @@ function Auth_Button(props: buttonProp) {
             onClick={props.action}>
             {props.title}
         </Button>
-    )
+    );
 }
 
 export default Auth_Button ;

@@ -17,8 +17,64 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "import",
+        "react-hooks"
     ],
     "rules": {
-    }
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never",
+				"mjs": "never"
+			}
+		],
+		"linebreak-style": "off",
+		// "quotes": "warn",
+		"semi": ["error", "always"],
+		"class-methods-use-this": 0,
+		"import/namespace": "warn",
+		"import/no-extraneous-dependencies": [
+            "error", 
+            {
+                "devDependencies": [
+                    "**/*.test.ts", 
+                    "**/*.test.tsx",
+                    "**/*.stories.*",
+                    "**/.storybook/**/*.*"
+                ]
+            }
+        ],
+		"react-hooks/exhaustive-deps": "warn",
+		"react-hooks/rules-of-hooks": "warn",
+		"react/jsx-closing-bracket-location": 0,
+		"react/jsx-curly-spacing": 0,
+		"react/jsx-pascal-case": 0,
+		"react/jsx-props-no-spreading": "warn",
+		"no-console": "warn",
+		"no-unused-vars": "warn",
+		"no-await-in-loop": "warn",
+		"consistent-return": "warn",
+		"require-await": "warn",
+		"no-param-reassign": 0,
+		"jsx-a11y/anchor-is-valid": 0
+    },
+	"settings": {
+		"react": {
+			"version": "detect"
+		},
+		"import/resolver": {
+			"node": {
+				"extensions": [".js",".jsx", ".ts", ".tsx"]
+			}
+		},
+		"import/extensions": [".js", ".jsx", ".ts", ".tsx", ".mjs"],
+		"Import/parsers": {
+			"@typescript-eslint/parser": [".ts", ".tsx"]
+		}
+	}
 }
