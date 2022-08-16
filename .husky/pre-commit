@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run lint:src && exec < /dev/tty && npx cz --hook
+npm run release && npx --no -- commitlint --edit "\${1}"
