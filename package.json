@@ -1,6 +1,6 @@
 {
   "name": "@smart-warehousing/tsx-sandbox-ui",
-  "version": "0.2.79",
+  "version": "0.2.80",
   "description": "A simple test package",
   "typings": "src/index.d.ts",
   "keywords": [
@@ -23,7 +23,7 @@
     "build-storybook": "build-storybook",
     "lint:src": "eslint src/ --no-error-on-unmatched-pattern",
     "pretty-quick": "pretty-quick",
-    "release": "npm run lint:src && exec < /dev/tty && npx cz --hook && standard-version"
+    "release": "standard-version"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.10",
