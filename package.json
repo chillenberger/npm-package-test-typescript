@@ -22,8 +22,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "lint:src": "eslint src/ --no-error-on-unmatched-pattern",
-    "pretty-quick": "pretty-quick",
-    "run_py": "python3 scripts/test.py"
+    "pretty-quick": "pretty-quick"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.10",
