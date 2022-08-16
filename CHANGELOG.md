@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.29](https://github.com/chillenberger/npm-package-test-typescript/compare/v0.2.28...v0.2.29) (2022-08-16)
+
 ### [0.2.28](https://github.com/chillenberger/npm-package-test-typescript/compare/v0.2.27...v0.2.28) (2022-08-16)
 
 ### [0.2.27](https://github.com/chillenberger/npm-package-test-typescript/compare/v0.2.25...v0.2.27) (2022-08-16)
