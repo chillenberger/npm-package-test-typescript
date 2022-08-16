@@ -2,4 +2,4 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 
-npm run lint:src && npx cz --hook || true
+npm run lint:src && npx cz --hook
