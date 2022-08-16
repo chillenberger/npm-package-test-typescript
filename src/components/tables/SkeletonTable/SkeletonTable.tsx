@@ -1,7 +1,5 @@
 import React from 'react';
 
 export default function SkeletonTable() {
-    return (
-        <div>Skeleton Table</div>
-    )
+  return <div>Skeleton Table</div>;
 }

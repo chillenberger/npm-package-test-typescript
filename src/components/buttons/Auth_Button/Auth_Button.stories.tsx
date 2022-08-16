@@ -14,7 +14,10 @@ export default {
 } as ComponentMeta<typeof Auth_Button>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Auth_Button> = (args) => <Auth_Button {...args} />;
+/* eslint-disable react/jsx-props-no-spreading */
+const Template: ComponentStory<typeof Auth_Button> = (args) => (
+  <Auth_Button {...args} />
+);
 
 export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
@@ -26,4 +29,3 @@ export const Secondary = Template.bind({});
 Secondary.args = {
   title: 'Other Button',
 };
-

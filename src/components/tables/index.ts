@@ -1,1 +1,1 @@
-export {default as SkeletonTable } from './SkeletonTable/SkeletonTable';
+export { default as SkeletonTable } from './SkeletonTable/SkeletonTable';
