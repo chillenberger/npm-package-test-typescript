@@ -19,6 +19,9 @@ To change back to the default npm registry use `npm config set registry https://
 
 REF: [AWS](https://docs.aws.amazon.com/codeartifact/latest/ug/npm-auth.html)
 
+## Commit 
+This repository uses commitizen for structuring commit messages.
+
 ## Build Dist File
 The dist file is the project build output.  To perform a new build run the command `npm build`.
 This will clean the dist folder and rebuild the library. 
