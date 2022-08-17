@@ -13,7 +13,6 @@
     "package.json"
   ],
   "scripts": {
-    "commit": "cz",
     "preinstall": "npm run co:login",
     "co:login": "aws codeartifact login --tool npm --repository ui-collection --domain smart-warehousing-codeartifact-sandbox-domain  --region us-east-1 --profile smart-sandbox",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -79,11 +78,6 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
     }
   }
 }
