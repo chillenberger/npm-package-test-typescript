@@ -1,10 +1,9 @@
-
 {
-    "testEnvironment": "jsdom",
-    "transform": {
-        "^.+\\.(j|t)sx?$": "babel-jest"
-    },
-    "moduleNameMapper": {
-        "\\.(css|scss|less)$": "babel-jest"
-    }
+  "testEnvironment": "jsdom",
+  "transform": {
+    "^.+\\.(j|t)sx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "\\.(css|scss|less)$": "babel-jest"
+  }
 }
