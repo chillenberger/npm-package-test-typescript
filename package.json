@@ -22,7 +22,8 @@
     "build-storybook": "build-storybook",
     "lint:src": "eslint src/ --no-error-on-unmatched-pattern",
     "pretty-quick": "pretty-quick",
-    "prepare": "husky install"
+    "prepare": "husky install", 
+    "changelog": "npx generate-changelog"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.10",
