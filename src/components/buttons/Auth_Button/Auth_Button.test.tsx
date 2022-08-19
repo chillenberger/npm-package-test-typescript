@@ -8,7 +8,7 @@ describe('Auth_Button', () => {
   test('renders the Auth_Button component', () => {
     render(
       <div data-testid="button">
-        <Auth_Button title="test button" action={() => void(0)} />
+        <Auth_Button title="test button" action={() => void 0} />
       </div>,
     );
   });
@@ -16,7 +16,7 @@ describe('Auth_Button', () => {
   test('verify button title prop', () => {
     const { getByTestId } = render(
       <div data-testid="button">
-        <Auth_Button title="test button" action={() => void(0)} />
+        <Auth_Button title="test button" action={() => void 0} />
       </div>,
     );
     expect(getByTestId('button')).toHaveTextContent('test button');
