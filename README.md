@@ -40,7 +40,6 @@ Since this is a component library, and not a deployable webapp, we cannot use re
 
 To view the component components, in your folder, create a `<YOUR COMPONENT>.story.tsx` file. Use another story as a template to create your story. Once completed run the command `npm run storybook`. Your component will be visible at the localhost:6006.
 
+## NPM
 
-## NPM 
-
-When connected to Code Artifact only select npm command are supported.  See [Here](https://docs.aws.amazon.com/codeartifact/latest/ug/npm-commands.html)
+When connected to Code Artifact only select npm command are supported. See [Here](https://docs.aws.amazon.com/codeartifact/latest/ug/npm-commands.html)
