@@ -4,12 +4,12 @@ import '../../../styles/components/buttons/Auth_Button.scss';
 
 interface buttonProp {
   title: string;
-  action: () => void;
+  myaction: () => void;
 }
 
 function Auth_Button(props: buttonProp) {
   return (
-    <Button className="auth-button" id="loginButton" onClick={props.action}>
+    <Button className="auth-button" id="loginButton" onClick={props.myaction}>
       {props.title}
     </Button>
   );

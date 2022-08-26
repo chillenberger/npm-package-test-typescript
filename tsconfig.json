@@ -104,6 +104,7 @@
     "src"
   ],
   "exclude": [
-      "**/*.stories.tsx"
+      "**/*.stories.tsx",
+      "**/*.test.tsx"
     ]
 }
