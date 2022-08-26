@@ -1,20 +1,20 @@
 version: 0.2
-phases: 
-  install: 
-    runtime-versions: 
+phases:
+  install:
+    runtime-versions:
       nodejs: 14
 
-  pre_build: 
-    commands: 
+  pre_build:
+    commands:
       - npm --versions
       - echo Installing NPM dependencies..; npm ci;
       - echo Auditing NPM dependencies..; npm audit;
       - echo Log in to Code Artifact..; npm run artifact:login:ci;
 
-  build: 
-    commands: 
+  build:
+    commands:
       - echo Building dist; npm run build
 
-  post_build: 
-    commands: 
-      - npm publish; 
+  post_build:
+    commands:
+      - npm publish;
