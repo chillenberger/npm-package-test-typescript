@@ -11,14 +11,12 @@ export default {
   component: Auth_Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    myaction: {action: true}
-  }, 
+    myaction: { action: true },
+  },
   parameters: {
-    notes: 'some notes about auth button.', 
-  }
- 
+    notes: 'some notes about auth button.',
+  },
 } as ComponentMeta<typeof Auth_Button>;
-
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 /* eslint-disable react/jsx-props-no-spreading */
@@ -32,12 +30,13 @@ Primary.args = {
   title: 'Button',
 };
 Primary.parameters = {
-  notes: 'testing ault notes more data and more data and more data adn more data. hhhhhhhhgjhgkgkhgjgkjgkjgkgkjh',
+  notes:
+    'testing ault notes more data and more data and more data adn more data. hhhhhhhhgjhgkgkhgjgkjgkjgkgkjh',
   design: {
-    type: "figma",
-    url: "https://www.figma.com/file/MSg1gCImx5qR9r8EHuFHtE/Untitled?node-id=0%3A1"
-  }
-}
+    type: 'figma',
+    url: 'https://www.figma.com/file/MSg1gCImx5qR9r8EHuFHtE/Untitled?node-id=0%3A1',
+  },
+};
 
 export const Secondary = Template.bind({});
 Secondary.args = {
@@ -46,10 +45,10 @@ Secondary.args = {
 
 export const Demo = Template.bind({});
 Demo.args = {
-  title: 'Demo'
-}
+  title: 'Demo',
+};
 Demo.play = async ({ args, canvasElement }) => {
   const canvas = within(canvasElement);
   await userEvent.click(canvas.getByRole('button'));
-  await waitFor(() => expect(args.myaction).toHaveBeenCalled()); 
-}
+  await waitFor(() => expect(args.myaction).toHaveBeenCalled());
+};

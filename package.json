@@ -1,6 +1,6 @@
 {
   "name": "@dansrepo",
-  "version": "0.7.2",
+  "version": "0.1.0",
   "description": "A simple test package",
   "typings": "dist/index.d.ts",
   "keywords": [
@@ -15,12 +15,13 @@
   "scripts": {
     "preinstall": "npm run co:login",
     "co:login": "aws codeartifact login --tool npm --repository my-repo --domain my-domain  --region us-west-2 ",
+    "artifact:login:ci": "aws codearrtifact login --tool npm --repository my-repo --domain my-domian --region us-west-2",
     "test": "jest",
     "build": "webpack",
     "tsc": "tsc",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint:src": "eslint src/ --no-error-on-unmatched-pattern",
+    "lint": "eslint src/ --no-error-on-unmatched-pattern",
     "pretty-quick": "pretty-quick",
     "prepare": "husky install"
   },
@@ -78,7 +79,6 @@
     "antd": "*"
   },
   "peerDependencies": {
-    "antd": "*",
-    "react": "*"
+    "antd": "*"
   }
 }
